@@ -1,7 +1,7 @@
 ---
 ref: cosive
 name: Cosive SecOps pack
-version: 1.0.0
+version: 0.7.0
 description: Cosive SecOps helpers for Stackstorm
-author: Cosive
+author: Kayne Naughton (Cosive)
 email: support@cosive.com

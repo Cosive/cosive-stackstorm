@@ -1,0 +1,10 @@
+name: rbl_lookup
+runner_type: python-script
+description: "looks up a domain in the Spamhaus ZEN lists"
+enabled: true
+entry_point: rbl_lookup.py
+parameters:
+    domain:
+        type: string
+        required: true
+        description: The domain to check

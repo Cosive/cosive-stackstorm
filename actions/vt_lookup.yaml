@@ -1,0 +1,23 @@
+---
+name: vt_lookup
+runner_type: http-request
+enabled: true
+description: "Look up a resource on Virustotal"
+parameters:
+  resource:
+    type: "string"
+    required: true
+    description: "A hash, domain or IP address"
+  url:
+    default: "https://www.virustotal.com/vtapi/v2/file/report?apikey={{st2kv.system.virustotal_api_key}}&resource={{resource}}"
+    type: string
+    immutable: true
+  method:
+    default: GET
+    enum:
+    - GET
+    - POST
+    - PUT
+    - DELETE
+  params:
+    type: string

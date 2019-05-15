@@ -1,0 +1,24 @@
+---
+name: screenshot_website
+description: Use Chrome headless to take a image of a website
+runner_type: local-shell-cmd
+enabled: true
+parameters:
+    url:
+        type: string
+        default: "https://www.abc.net.au"
+        required: true
+    size:
+        type: string
+        default: "1920,1280"
+        description: "Size of the virtual browser window: \"width,height\""
+    imagepath:
+        type: string
+        default: "/tmp"
+        description: location to save the screenshot png
+    cmd:
+        type: string
+        immutable: true
+        default: "cd ~ && google-chrome --headless --disable-gpu --window-size={{size}} --screenshot={{imagepath}}/${ST2_ACTION_EXECUTION_ID}.png {{url}} 1>&2 ; chmod 644 {{imagepath}}/${ST2_ACTION_EXECUTION_ID}.png"
+    
+

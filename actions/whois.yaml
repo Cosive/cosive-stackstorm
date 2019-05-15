@@ -1,0 +1,11 @@
+---
+name: "whois"
+runner_type: "python-script"
+enabled: true
+description: "Get the whois data for a domain"
+entry_point: "whois_action.py"
+parameters:
+  query:
+    type: 'string'
+    description: 'The domain you want to search for'
+    required: true

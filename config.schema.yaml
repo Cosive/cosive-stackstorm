@@ -1,0 +1,5 @@
+---
+virustotal_api_key:
+  description: an API key for VirusTotal, only a public one is needed for lookups. Click on your profile and select "API Key" to see it.
+  type: string
+  secret: true

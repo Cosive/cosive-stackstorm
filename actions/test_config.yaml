@@ -1,0 +1,7 @@
+---
+name: test_config
+runner_type: local-shell-cmd
+parameters:
+  cmd:
+    type: string
+    default: "echo {{config.virustotal_api_key}}"

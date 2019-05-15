@@ -1,0 +1,4 @@
+spam-lists
+jellyfish==0.6.0
+homoglyphs
+pythonwhois

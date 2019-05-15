@@ -1,0 +1,25 @@
+name: find-lookalike-domains
+runner_type: python-script
+description: "Uses Jaro-Winkler algorithm to compare the domain to a list of good domains to spot look-alikes"
+enabled: true
+entry_point: find_lookalike_domains.py
+parameters:
+  domain:
+    type: string
+    required: true
+    description: The domain to check for lookalikes
+  domain_list:
+    type: array
+    default:
+      - goodbank.com
+      - my.goodbank.com
+      - goodbank.com.au
+      - goodbank.co.nz
+  threshold:
+    type: number
+    default: 0.9
+    description: threshold for counting something as a match, 1.0 is identical,
+  check_homoglyphs:
+    type: boolean
+    default: false
+    description: "convert any homoglyphs (look-alike characters) in the domain into their possible ascii representations (note: weirdly slow for some strings)"
